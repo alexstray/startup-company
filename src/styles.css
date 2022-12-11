@@ -29,3 +29,11 @@
 .dropdown:hover .dropdown-menu {
     transform: scaleY(1);
 }
+
+.hero-vid-check:checked ~ .hero-vid {
+    position: absolute;
+    transform: scale(1.2);
+    background-color: black;
+    height: 100%;
+    width: 50%;
+}
