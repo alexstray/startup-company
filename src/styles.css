@@ -2,38 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.checkbox-trigger:checked + .ham-menu .ham1 {
-    transform: rotate(45deg);
-    position: relative;
-    top: 6px;
-}
 
-.checkbox-trigger:checked + .ham-menu .ham2 {
-    opacity: 0;
-}
-
-.checkbox-trigger:checked + .ham-menu .ham3 {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -14px;
-}
-
-.ham-menu, .dropdown-menu {
+.more-dd-menu {
     transform: scaleY(0);
     transition: transform 0.3s ease;
 }
 
-.checkbox-trigger:checked ~ .ham-menu,
-.dropdown:hover .dropdown-menu {
+.more-dd:hover .more-dd-menu {
     transform: scaleY(1);
 }
 
-.hero-vid-check:checked ~ .hero-vid {
-    position: absolute;
-    transform: scale(1.2);
-    background-color: black;
-    height: 100%;
-    width: 50%;
+.checkbox1:checked + label > .hamburger1 > .bar1{
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 41px
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+    transform: translateX(-40px);
+    background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 41px;
+}
+
+.mobile-nav {
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.checkbox1:checked ~ .mobile-nav {
+    transform: scaleY(1);
 }
